@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ajouter Produit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>update produit</h2>
+    <form th:action="@{/updateproduitx}"  method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="form-control" id="name" th:value="${productToBeUpdated.getName()}" required>
+        </div>
+        <div class="form-group">
+            <label for="taille">Taille:</label>
+            <input type="text" name="taille" class="form-control" id="taille" th:value="${productToBeUpdated.getTaille()}"  required>
+        </div>
+        <div class="form-group">
+            <label for="ageMin">Age Min:</label>
+            <input type="number" name="ageMin" class="form-control" id="ageMin" th:value="${productToBeUpdated.getAgeMin()}"  required>
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock:</label>
+            <input type="number" name="stock" class="form-control" id="stock" th:value="${productToBeUpdated.getStock()}"  required>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" name="price" step="0.01" class="form-control" id="price" th:value="${productToBeUpdated.getPrice()}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">update</button>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

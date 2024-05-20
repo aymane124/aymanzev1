@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ajouter Produit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Ajouter un Nouveau Produit</h2>
+    <form th:action="@{/addproduit}"  method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="form-control" id="name"  required>
+        </div>
+        <div class="form-group">
+            <label for="taille">Taille:</label>
+            <input type="text"  class="form-control" id="taille" name="taille"  required>
+        </div>
+        <div class="form-group">
+            <label for="ageMin">Age Min:</label>
+            <input type="number" name="ageMin" class="form-control" id="ageMin"  required>
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock:</label>
+            <input type="number" name="stock" class="form-control" id="stock"  required>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" name="price" step="0.01" class="form-control" id="price" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
