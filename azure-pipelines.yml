@@ -20,5 +20,5 @@ steps:
   inputs:
     ConnectionType: 'AzureRM'
     appType: 'webApp'
-    WebAppName: '<Your-WebApp-Name>' # Replace with your web app name
+    WebAppName: '<Your-WebApp-Name>'  # Replace with your web app name
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
